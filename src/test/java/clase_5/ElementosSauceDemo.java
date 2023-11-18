@@ -13,7 +13,7 @@ public class ElementosSauceDemo {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/test/resources/drivers/chromedriver" );
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
-        driver.manage().window().maximize(); // Para que la ventada del browser este maximizada
+        driver.manage().window().maximize(); // Para que la ventana del browser este maximizada
 
         // id = "user-name"
         WebElement txtUserName = driver.findElement(
@@ -25,9 +25,9 @@ public class ElementosSauceDemo {
         WebElement txtUserPassword = driver.findElement(
                 By.xpath("//*[@data-test = 'password']")
         );
-        //Thread.sleep(5000);
         txtUserPassword.sendKeys("secret_sauce");
 
+        // name = "login-button"
         WebElement btnLogin = driver.findElement(
                 By.name("login-button")
         );
